@@ -4,7 +4,9 @@ This application is a resource for finding and purchasing broadway theatre ticke
 
 ![Home Page](assets/images/D&S_Home.gif)
 
+
 ![Searching for a Show](assets/images/Show_Search.gif)
+
 
 ![Viewing Itinerary](assets/images/Itinerary.gif)
 

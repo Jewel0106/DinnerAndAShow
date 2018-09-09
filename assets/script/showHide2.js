@@ -444,7 +444,7 @@ $(document).ready(function() {
   // loads shows on load of home page
 
   function loadShows() {
-    queryURL = "https://api.seatgeek.com/2/events?client_id=ODkxMDA2MnwxNTA1NDc2Njg3Ljkx&client_secret=d03ee2bc8b3508b71abadabe57072965260caf9a20d80887580eb4473fe42620&lat=40.7589&lon=-73.9851&range=2mi&q=broadway&taxonomies.id=3030000&taxonomies.name=theater_broadway";
+    queryURL = "https://api.seatgeek.com/2/events?client_id=ODkxMDA2MnwxNTA1NDc2Njg3Ljkx&client_secret=d03ee2bc8b3508b71abadabe57072965260caf9a20d80887580eb4473fe42620&lat=40.7589&lon=-73.9851&range=2mi&q=broadway&taxonomies.id=3000000&taxonomies.name=theater";
     $.ajax({
       url: queryURL,
       method: "GET",
@@ -475,7 +475,7 @@ $(document).ready(function() {
           // console.log("this pulls the initial popularity: " + popularity);
 
 
-          if (popularity > .4 * 100) {
+          if (popularity > .6 * 100) {
             //this gets the show name
             var results = response.events;
             var events = response.events[i].short_title;
@@ -699,10 +699,10 @@ $(document).ready(function() {
 
     var headerDiv = $("<div>");
     headerDiv.attr("id", "alert-message");
-    headerDiv.append("We're Sorry. We can not locate that show. Please choose from the shows below.");
+    headerDiv.append("We're Sorry. We can not locate that show. Please search again or choose from the shows below.");
     $("#alert-header").append(headerDiv);
 
-    queryURL = "https://api.seatgeek.com/2/events?client_id=ODkxMDA2MnwxNTA1NDc2Njg3Ljkx&client_secret=d03ee2bc8b3508b71abadabe57072965260caf9a20d80887580eb4473fe42620&lat=40.7589&lon=-73.9851&range=2mi&q=broadway&taxonomies.id=3030000&taxonomies.name=theater_broadway";
+    queryURL = "https://api.seatgeek.com/2/events?client_id=ODkxMDA2MnwxNTA1NDc2Njg3Ljkx&client_secret=d03ee2bc8b3508b71abadabe57072965260caf9a20d80887580eb4473fe42620&lat=40.7589&lon=-73.9851&range=2mi&q=broadway&taxonomies.id=3000000&taxonomies.name=theater";
     $.ajax({
       url: queryURL,
       method: "GET",
